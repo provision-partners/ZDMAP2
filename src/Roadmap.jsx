@@ -76,9 +76,7 @@ const OVERVIEW_PHASES = [
   { laneId:"vendor", id:"setup",            label:"Platform Setup",         start:"2027-01", end:"2027-09", color:"#2EC4B6", kind:"phase" },
   // Pilot Execution
   { laneId:"pilot",  id:"p1",               label:"Pilot 1 — RetailMeNot",                          start:"2027-10", end:"2027-12", color:"#FF6B35", kind:"phase" },
-  { laneId:"pilot",  id:"p2prep",           label:"P1 Retro / P2 Prep",                             start:"2028-01", end:"2028-01", color:"#8a8499", kind:"prep" },
   { laneId:"pilot",  id:"p2",               label:"Pilot 2 — Tech Flagships (ZDNet, PCMag, CNET)",  start:"2028-02", end:"2028-04", color:"#FF4081", kind:"phase" },
-  { laneId:"pilot",  id:"p3prep",           label:"P2 Retro / P3 Prep",                             start:"2028-05", end:"2028-05", color:"#8a8499", kind:"prep" },
   { laneId:"pilot",  id:"p3",               label:"Pilot 3 — Mashable, Spiceworks, Lifehacker",     start:"2028-06", end:"2028-08", color:"#9B59B6", kind:"phase" },
   { laneId:"pilot",  id:"platformLive",     label:"Travel Platform Live",                           start:"2028-08", end:"2028-08", color:"#F7B731", kind:"milestone" },
 ];
@@ -835,7 +833,7 @@ export default function RoadmapV16() {
               color: t.label, border: `1px solid ${t.label}40`,
               padding: "2px 10px", borderRadius: "3px", fontSize: "10px",
               fontFamily: "'Courier New',monospace", letterSpacing: "2px" }}>
-              v1.6.3 DRAFT
+              v1.6.4 DRAFT
             </div>
           </div>
           <h1 style={{ fontSize: "clamp(22px,3.5vw,36px)", fontWeight: "300",
@@ -1098,6 +1096,7 @@ function NotesPanel() {
           <li><strong style={{ color: t.text }}>Activities as duration bars:</strong> rendered inside their phase window and visually lighter than top-level phases, so eye hierarchy flows phase → milestone → activity.</li>
           <li><strong style={{ color: t.text }}>Shared milestones (M1–M4, P1):</strong> on the Workstream view they render as gold vertical dashed lines across all lanes so dependencies on decision points are visible.</li>
           <li><strong style={{ color: t.text }}>Expandable lanes:</strong> click any workstream label (or the +/− button) in the Workstream view to expand and read full activity descriptions. Use the Expand all / Collapse all buttons above the chart for bulk control.</li>
+          <li><strong style={{ color: t.text }}>One-month gap between pilots:</strong> the visible gap between Pilot 1 and Pilot 2 (Jan 2028) and between Pilot 2 and Pilot 3 (May 2028) is intentional — each window is reserved for retrospective on the completed pilot and preparation for the next.</li>
           <li><strong style={{ color: t.text }}>Timeline may compress:</strong> per Tim's note, dates may shorten; unlikely to lengthen. Data model supports easy date edits — all phase windows live in PHASE_WINDOWS at the top of the file.</li>
         </ul>
       </div>
