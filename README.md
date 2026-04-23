@@ -1,4 +1,4 @@
-# ZD Roadmap — Project Pathways
+# ZD Roadmap — Project Pathways 
 
 Vite + React app rendering the `v1.6.3` integrated roadmap for Ziff Davis Travel.
 
